@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jjh-bk-vyk">
+                                <rect key="frame" x="133.5" y="125" width="147" height="96"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-hA-Bb5">
+                                <rect key="frame" x="132" y="474" width="150" height="150"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="DQT-HH-OKF">
+                                <rect key="frame" x="132" y="271" width="150" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oe-Dk-QeU">
+                                <rect key="frame" x="132.5" y="642" width="149" height="95"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="1WB-cm-qom"/>
+                                    <constraint firstAttribute="height" constant="95" id="JLh-6c-p6j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Roll"/>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1L2-EF-14I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32409873138995993" green="0.22377793806865565" blue="0.60189849138259888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jjh-bk-vyk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ux-rg-IBb"/>
+                            <constraint firstItem="DQT-HH-OKF" firstAttribute="top" secondItem="jjh-bk-vyk" secondAttribute="bottom" constant="60" id="9k6-SK-5Ny"/>
+                            <constraint firstItem="jjh-bk-vyk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="81" id="BHm-7V-c0b"/>
+                            <constraint firstItem="MbU-hA-Bb5" firstAttribute="top" secondItem="DQT-HH-OKF" secondAttribute="bottom" constant="53" id="Img-Sx-gFN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9oe-Dk-QeU" secondAttribute="bottom" constant="125" id="QDc-g6-zda"/>
+                            <constraint firstItem="9oe-Dk-QeU" firstAttribute="top" secondItem="MbU-hA-Bb5" secondAttribute="bottom" constant="53" id="Qht-8k-AEg"/>
+                            <constraint firstItem="9oe-Dk-QeU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qr9-HD-eoY"/>
+                            <constraint firstItem="DQT-HH-OKF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="arP-B8-caI"/>
+                            <constraint firstItem="MbU-hA-Bb5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvG-J4-Zpp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="DQT-HH-OKF" id="Tgv-wW-dHA"/>
+                        <outlet property="diceImageView2" destination="MbU-hA-Bb5" id="IaM-kj-KWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="150" height="150"/>
+        <image name="dice2" width="150" height="150"/>
+        <image name="diceeLogo" width="147" height="96"/>
+    </resources>
+</document>
